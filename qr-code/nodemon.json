@@ -1,6 +1,0 @@
-{
-    "verbose": true,
-    "watch": ["public"],
-    "ext": "html,css,js",
-    "exec": "npm run start:dev"
-  }

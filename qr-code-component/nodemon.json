@@ -1,0 +1,5 @@
+{
+    "verbose": true,
+    "ext": "html,css,js",
+    "exec": "npm run serve"
+  }
