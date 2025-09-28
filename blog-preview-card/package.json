@@ -1,10 +1,10 @@
 {
-  "name": "qr-code",
+  "name": "blog-preview",
   "private": true,
   "scripts": {
     "dev": "live-server --port=3000"
   },
-  "devDependencies": {
+  "dependencies": {
     "live-server": "^1.2.2"
   }
 }
