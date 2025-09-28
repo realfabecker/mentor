@@ -28,7 +28,7 @@ body {
   padding: 2.4rem;
 }
 
-main {
+article {
   max-width: clamp(32.7rem, 32.7rem + 0.25vw, 38.4rem);
   background-color: var(--color-white);
   border-radius: 2rem;
@@ -40,21 +40,19 @@ main {
   box-shadow: 1rem 1rem var(--color-gray-950);
 }
 
-figure.article {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-}
-
-figure.article p.publication-date {
-  font-size: clamp(1.2rem, 1.2rem + 0.25vw, 1.4rem);
-}
-
-figure.article img {
+article img {
   border-radius: 1rem;
 }
 
-figure.article span.tag {
+article div.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+article div.content span.tag {
   color: var(--color-gray-950);
   font-weight: var(--fw-bold);
   background-color: var(--color-yellow);
@@ -63,41 +61,40 @@ figure.article span.tag {
   font-size: clamp(1.2rem, 1.2rem +0.25vw, 1.4rem);
 }
 
-figure.article h1 {
-  font-size: clamp(2rem, 1.6rem + 0.25vw, 2.4rem);
-  font-weight: var(--fw-bold);
+article div.content p.publication-date {
+  font-size: clamp(1.2rem, 1.2rem + 0.25vw, 1.4rem);
 }
 
-figure.article h1:hover {
+article div.content h1 a {
+  font-size: clamp(2rem, 1.6rem + 0.25vw, 2.4rem);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  color: var(--color-gray-950);
+}
+
+article div.content h1 a:hover,
+article div.content h1 a:focus {
   color: var(--color-yellow);
   cursor: pointer;
 }
 
-figure.article p.fragment {
+article div.content p.fragment {
   font-size: clamp(1.4rem, 1.4rem + 0.25vw, 1.6rem);
   color: var(--color-gray-500);
   font-weight: var(--fw-regular);
 }
 
-figure.article figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.2rem;
-}
-
-figure.author {
+article footer.author {
   display: flex;
   gap: 1.2rem;
   align-items: center;
 }
 
-figure.author img {
+article footer.author img {
   width: 3.2rem;
 }
 
-figure.author p {
+article footer.author p {
   font-weight: var(--fw-bold);
   font-size: 1.4rem;
   line-height: 150%;
