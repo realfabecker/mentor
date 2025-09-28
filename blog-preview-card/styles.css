@@ -99,6 +99,7 @@ article footer.author p {
   font-size: 1.4rem;
   line-height: 150%;
   color: var(--color-gray-950);
+  font-style: normal;
 }
 
 .attribution {
