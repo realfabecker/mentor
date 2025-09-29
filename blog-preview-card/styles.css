@@ -17,7 +17,6 @@
 }
 
 body {
-  position: relative;
   background-color: var(--color-yellow);
   min-height: 100vh;
   font-family: "Figtree", sans-serif;
@@ -25,7 +24,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2.4rem;
+  padding: clamp(1rem, 4vw, 2.4rem);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+h1,
+strong,
+footer,
+p {
+  line-height: 150%;
 }
 
 article {
@@ -42,6 +54,7 @@ article {
 
 article img {
   border-radius: 1rem;
+  max-width: 100%;
 }
 
 article div.content {
@@ -52,13 +65,14 @@ article div.content {
   gap: 1.2rem;
 }
 
+article div.content strong.tag,
 article div.content span.tag {
   color: var(--color-gray-950);
   font-weight: var(--fw-bold);
   background-color: var(--color-yellow);
   padding: 0.4rem 1.2rem;
   border-radius: 0.4rem;
-  font-size: clamp(1.2rem, 1.2rem +0.25vw, 1.4rem);
+  font-size: clamp(1.2rem, 1.2rem + 0.25vw, 1.4rem);
 }
 
 article div.content p.publication-date {
@@ -104,10 +118,8 @@ article footer.author p {
 
 .attribution {
   font-size: 1.1rem;
-  text-align: center;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  align-self: flex-end;
+  padding: 1rem;
 }
 
 .attribution a {
