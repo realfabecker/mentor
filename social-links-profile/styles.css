@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* Atribui font-weight, font-size, line-height e font-family */
+  --text-preset-1: 400 2.4rem / 1.5 "Inter", sans-serif;
+  --text-preset-1-semi: 600 2.4rem / 1.5 "Inter", sans-serif;
+  --text-preset-1-bold: 700 2.4rem / 1.5 "Inter", sans-serif;
+  --text-preset-2: 400 1.4rem / 1.5 "Inter", sans-serif;
+  --text-preset-2-semi: 600 1.4rem / 1.5 "Inter", sans-serif;
+  --text-preset-2-bold: 700 1.4rem / 1.5 "Inter", sans-serif;
+
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0;
+  background-color: var(--color-grey-900);
+  padding: 2.4rem;
+}
+
+main {
+  max-width: clamp(32.7rem, 32.7rem + 10vh, 38.4);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  justify-content: center;
+}
+
+main article {
+  background-color: var(--color-grey-800);
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+figure img {
+  border-radius: 50%;
+  width: 8.8rem;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+figcaption {
+  text-align: center;
+}
+
+figcaption h1 {
+  font: var(--text-preset-1-semi);
+  color: var(--color-white);
+}
+
+figcaption p {
+  font: var(--text-preset-2-bold);
+  color: var(--color-green);
+}
+
+article h2 {
+  font: var(--text-preset-2);
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+ul li {
+  background-color: var(--color-grey-700);
+  text-align: center;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+}
+
+ul li:hover,
+ul li:hover a {
+  background-color: var(--color-green);
+  color: var(--color-grey-700);
+  cursor: pointer;
+}
+
+ul li a {
+  font: var(--text-preset-2-bold);
+  color: var(--color-white);
+}
+
+footer.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-white);
+  padding: 1rem;
+}
+
+footer.attribution a {
+  color: var(--color-green);
+}
