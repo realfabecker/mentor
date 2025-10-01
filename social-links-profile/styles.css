@@ -101,7 +101,7 @@ ul li {
 }
 
 ul li:hover,
-ul li:hover a {
+ul li:focus-within {
   background-color: var(--color-green);
   color: var(--color-grey-700);
   cursor: pointer;
