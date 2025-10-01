@@ -34,7 +34,7 @@ body {
 }
 
 main {
-  max-width: clamp(32.7rem, 32.7rem + 10vh, 38.4);
+  max-width: clamp(32.7rem, 32.7rem + 10vw, 38.4rem);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -72,14 +72,14 @@ figcaption h1 {
   color: var(--color-white);
 }
 
+article p {
+  font: var(--text-preset-2);
+  color: var(--color-white);
+}
+
 figcaption p {
   font: var(--text-preset-2-bold);
   color: var(--color-green);
-}
-
-article h2 {
-  font: var(--text-preset-2);
-  color: var(--color-white);
 }
 
 a {
@@ -107,7 +107,8 @@ ul li a {
 
 ul li a:focus,
 ul li:hover a {
-  color: var(--color-gray-700);
+  color: var(--color-grey-700);
+  outline: unset;
 }
 
 ul li:hover,
@@ -117,7 +118,7 @@ ul li:focus-within {
 }
 
 footer.attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
   color: var(--color-white);
   padding: 1rem;
@@ -125,4 +126,10 @@ footer.attribution {
 
 footer.attribution a {
   color: var(--color-green);
+}
+
+footer.attribution a:focus,
+footer.attribution a:hover {
+  font-size: 1.4rem;
+  outline: unset;
 }
