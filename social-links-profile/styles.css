@@ -100,17 +100,20 @@ ul li {
   border-radius: 0.8rem;
 }
 
-ul li:hover,
-ul li:focus-within
-ul li:hover a {
-  background-color: var(--color-green);
-  color: var(--color-grey-700);
-  cursor: pointer;
-}
-
 ul li a {
   font: var(--text-preset-2-bold);
   color: var(--color-white);
+}
+
+ul li a:focus,
+ul li:hover a {
+  color: var(--color-gray-700);
+}
+
+ul li:hover,
+ul li:focus-within {
+  background-color: var(--color-green);
+  cursor: pointer;
 }
 
 footer.attribution {
