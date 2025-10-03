@@ -15,7 +15,7 @@
   --text-preset-2-semi: 600 1.4rem / 1.5 "Inter", sans-serif;
   --text-preset-2-bold: 700 1.4rem / 1.5 "Inter", sans-serif;
 
-  --color-green: hsl(75, 94%, 57%);
+  --color-green: hsl(47, 80%, 46%);
   --color-white: hsl(0, 0%, 100%);
   --color-grey-700: hsl(0, 0%, 20%);
   --color-grey-800: hsl(0, 0%, 12%);
@@ -35,6 +35,7 @@ body {
 
 main {
   max-width: clamp(32.7rem, 32.7rem + 10vw, 38.4rem);
+  min-width: 32.7rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -75,6 +76,7 @@ figcaption h1 {
 article p {
   font: var(--text-preset-2);
   color: var(--color-white);
+  text-align: center;
 }
 
 figcaption p {
