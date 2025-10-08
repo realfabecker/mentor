@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+:root {
+  font-size: 62.5%;
+
+  --text-preset-0: 400 1rem / 100% "Young Serif", serif;
+  --text-preset-1: 400 3.6rem / 100% "Young Serif", serif;
+  --text-preset-2: 400 2.8rem / 100% "Young Serif", serif;
+  --text-preset-3: 600 2rem / 100% "Outfit", sans-serif;
+  --text-preset-4: 400 1.6rem / 150% "Outfit", sans-serif;
+  --text-preset-5: 700 1.6rem / 150% "Outfit", sans-serif;
+
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-rose-50: hsl(330, 100%, 98%);
+  --color-stone-900: hsl(24, 5%, 18%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-150: hsl(30, 18%, 87%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-brown-800: hsl(14, 45%, 36%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+  height: 100vh;
+  letter-spacing: 0;
+}
+
+hr {
+  color: var(--color-stone-150);
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  min-width: 37.5rem;
+  flex-grow: 1;
+}
+
+article,
+figure {
+  background-color: var(--color-white);
+}
+
+article {
+  padding: 4rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+section.title,
+section.ingredients,
+section.instructions,
+section.nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+section.title h1 {
+  font: var(--text-preset-1);
+  color: var(--color-stone-900);
+}
+
+section p {
+  font: var(--text-preset-4);
+  color: var(--color-stone-600);
+}
+
+section.preparation {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  background-color: var(--color-rose-50);
+  border-radius: 1.2rem;
+}
+
+section.preparation h2 {
+  font: var(--text-preset-3);
+  color: var(--color-rose-800);
+}
+
+section.preparation li {
+  font: var(--text-preset-4);
+  color: var(--color-stone-600);
+  margin-left: 2rem;
+  padding-left: 1.6rem;
+}
+
+section.ingredients h2,
+section.instructions h2,
+section.nutrition h2 {
+  font: var(--text-preset-2);
+  color: var(--color-brown-800);
+}
+
+section.ingredients ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+section.ingredients li,
+section.instructions li {
+  font: var(--text-preset-4);
+  color: var(--color-stone-600);
+  margin-left: 2rem;
+  padding-left: 1.6rem;
+}
+
+section.instructions ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+th,
+td {
+  padding: 1.2rem 3.2rem;
+}
+
+tr:first-child th,
+tr:first-child td {
+  padding-top: 0;
+}
+
+tr:not(:last-child) td,
+tr:not(:last-child) th {
+  border-bottom: 1px solid var(--color-stone-150);
+}
+
+section.nutrition table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+section.nutrition tr th {
+  font: var(--text-preset-4);
+  font-weight: normal;
+  color: var(--color-stone-600);
+}
+
+section.nutrition tr td {
+  font: var(--text-preset-4);
+  font-weight: bold;
+  color: var(--color-brown-800);
+}
+
+footer.attribution {
+  font: var(--text-preset-0);
+  color: var(--color-stone-600);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+footer.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: var(--color-stone-100);
+    padding: 12.8rem 7.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    max-width: clamp(61.6rem, 61.6rem + 10vw, 73.6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  article {
+    padding: 4rem;
+    border-bottom-left-radius: 2.4rem;
+    border-bottom-right-radius: 2.4rem;
+  }
+
+  figure {
+    padding: 4rem 4rem 0 4rem;
+    border-top-left-radius: 2.4rem;
+    border-top-right-radius: 2.4rem;
+  }
+
+  img {
+    border-radius: 1.2rem;
+  }
+}
