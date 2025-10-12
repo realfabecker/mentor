@@ -1,0 +1,14 @@
+{
+  "name": "product-preview-card-component",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently 'live-server --port=3000' 'sass --watch styles.scss styles.css --style=compressed'",
+    "sass:compile": "sass styles.scss styles.css",
+    "sass:watch": "sass --watch styles.scss styles.css"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2",
+    "sass": "^1.93.2"
+  }
+}
