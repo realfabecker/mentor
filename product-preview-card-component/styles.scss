@@ -7,12 +7,12 @@
 :root {
     font-size: 62.5%;
 
-    /* Atribui font-weight, font-size, line-height e font-family */
     --text-preset-1: 700 3.2rem / 1 "Fraunces", serif;
     --text-preset-2: 700 1.4rem / 1.1 "Montserrat", sans-serif;
     --text-preset-3: 400 1.4rem / 1.6 "Montserrat", sans-serif;
     --text-preset-4: 400 1.2rem / 1.2 "Montserrat", sans-serif;
     --text-preset-5: 400 1.3rem / 1.3 "Montserrat", sans-serif;
+    --text-preset-6: 400 1rem / 1 "Montserrat", sans-serif;
 
     --color-green-500: hsl(158, 36%, 37%);
     --color-green-700: hsl(158, 42%, 18%);
@@ -26,7 +26,7 @@
 body {
     padding: 0 1.3rem;
     font-size: 1.6rem;
-    min-height: 100vh;
+    min-height: 100dvh;
     background-color: var(--color-cream);
     display: flex;
     flex-direction: column;
@@ -42,6 +42,9 @@ img {
 
 main {
     margin-block: 2rem;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 article {
@@ -55,13 +58,13 @@ picture img {
 }
 
 section.product,
-section.description {
+div.description {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
 }
 
-section.description span {
+div.description span {
     font: var(--text-preset-4);
     letter-spacing: .5rem;
     text-transform: uppercase;
@@ -76,12 +79,12 @@ h1 {
     font: var(--text-preset-1);
 }
 
-section.description p {
+div.description p {
     font: var(--text-preset-3);
     color: var(--color-grey);
 }
 
-section.price {
+div.price {
     display: flex;
     align-items: center;
     gap: 1.6rem;
@@ -105,12 +108,30 @@ button {
     color: var(--color-white);
     padding: 1.75rem;
     border: 0;
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+    min-width: max-content;
+}
+
+button img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--color-green-700);
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .attribution {
     padding: 2.4rem;
-    font-size: 11px;
     text-align: center;
+    font: var(--text-preset-6);
 }
 
 .attribution a {
@@ -119,9 +140,17 @@ button {
 
 @media (min-width: 576px) {
     main {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    article {
         max-width: 600px;
         max-height: 456px;
-        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        border-radius: .8rem;
     }
 
     picture {
@@ -137,11 +166,5 @@ button {
 
     section.product {
         flex-basis: 50%;
-    }
-
-    article {
-        display: flex;
-        flex-direction: row;
-        border-radius: .8rem;
     }
 }
